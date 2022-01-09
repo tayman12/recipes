@@ -22,6 +22,8 @@ public class Recipe {
     private String url;
     private String description;
     private String directions;
+
+    @Enumerated(value = EnumType.STRING)
     private Difficulty difficulty;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
